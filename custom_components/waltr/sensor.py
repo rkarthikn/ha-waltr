@@ -14,12 +14,12 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.const import (
-    CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
     EntityCategory,
     UnitOfElectricPotential,
     UnitOfEnergy,
     UnitOfLength,
+    UnitOfRatio,
     UnitOfVolume,
 )
 from homeassistant.core import HomeAssistant
@@ -144,7 +144,7 @@ TANK_SENSORS = (
     ),
     WaltrSensorDescription(
         key="tds",
-        native_unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
+        native_unit_of_measurement=UnitOfRatio.PARTS_PER_MILLION,
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=_tds,
         exists_fn=lambda d: bool(d.get("is_tds_available")),
