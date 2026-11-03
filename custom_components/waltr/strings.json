@@ -1,0 +1,80 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Waltr",
+        "description": "Paste the API token from your Waltr account.",
+        "data": {
+          "api_token": "API token"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Waltr token expired",
+        "description": "Waltr rejected the saved token. Paste a new one.",
+        "data": {
+          "api_token": "API token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Waltr rejected this token.",
+      "cannot_connect": "Could not reach the Waltr server.",
+      "no_locations": "This Waltr account has no locations."
+    },
+    "abort": {
+      "already_configured": "This Waltr account is already added.",
+      "reauth_successful": "Token updated."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "online": { "name": "Online" },
+      "fault": { "name": "Fault" },
+      "running": { "name": "Running" },
+      "automated": { "name": "Automated" }
+    },
+    "number": {
+      "run_time": { "name": "Run time" }
+    },
+    "sensor": {
+      "battery": { "name": "Battery" },
+      "battery_voltage": { "name": "Battery voltage" },
+      "last_updated": { "name": "Last updated" },
+      "water_level_percentage": { "name": "Water level" },
+      "water_volume": { "name": "Water volume" },
+      "water_height": { "name": "Water height" },
+      "capacity": { "name": "Capacity" },
+      "tds": { "name": "TDS" },
+      "inflow_today": { "name": "Inflow today" },
+      "outflow_today": { "name": "Outflow today" },
+      "tanker_today": { "name": "Tanker water today" },
+      "energy_today": { "name": "Energy today" },
+      "last_command_by": { "name": "Last command by" },
+      "pump_status": {
+        "name": "Status",
+        "state": {
+          "off": "Off",
+          "on": "On",
+          "offline": "Offline",
+          "malfunction": "Malfunction"
+        }
+      },
+      "valve_status": {
+        "name": "Status",
+        "state": {
+          "closed": "Closed",
+          "open": "Open",
+          "offline": "Offline",
+          "malfunction": "Malfunction"
+        }
+      }
+    },
+    "switch": {
+      "pump": { "name": "Pump" },
+      "schedule": { "name": "Schedule" }
+    },
+    "valve": {
+      "valve": { "name": "Valve" }
+    }
+  }
+}
