@@ -1,3 +1,5 @@
+<img src="icon.png" alt="Waltr" width="96" align="right">
+
 # Waltr for Home Assistant
 
 Unofficial Home Assistant integration for [Waltr](https://waltr.in) smart water tank systems. It uses the
